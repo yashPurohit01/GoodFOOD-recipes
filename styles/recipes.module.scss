@@ -1,0 +1,40 @@
+@mixin display_flex($direction :row , $space :center,){
+    display: flex;
+    flex-direction: $direction ;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: $space;
+}
+
+.recipeCard {
+    @include display_flex() ;
+    min-height: 90vh;
+    width: 100vmax;
+    background-color: white;
+    & .recipe_card{
+        @include display_flex(column,center );
+        width: max-content;
+        padding: 20px 20px  0 20px;
+        border-radius: 20px;
+        margin: 25px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        color: rgb(85, 58, 8);
+        font-family: 'Lobster', cursive;
+        & .recipe_card_image{
+            border-radius: 20px;
+        }
+        & .recipe_card_header{
+          @include display_flex(row , space-between );
+          & h3{
+              margin: 20px;
+          }
+      }
+    }
+    & .veg_recipe_card{
+        background-color: rgb(202, 245, 202);
+    }
+    & .non_veg_recipe_card{
+        background-color: rgb(255, 219, 219);
+    }
+   
+}

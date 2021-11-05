@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v12/BngSUXNadjH0qYEzV7ab-oWlsbg95AiIW_3QRQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@mixin flex_display ($direction , $space){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: center;
+
+}
+@mixin circle($dimension ){
+  background-color:rgb(242, 242, 144);
+  width: $dimension;
+  height: $dimension;
+  border-radius:50%; 
+}
+.home_section_header{
+  @include flex_display(row , space-around);
+  flex-wrap: wrap;
+  width: 100vmax;
+   & .section{
+     width: 25vmax;
+     padding: 1rem;
+     & h1{
+       font-size: 2.5rem;
+       font-family:Georgia, 'Times New Roman', Times, serif;
+     }
+     & p{
+       font-size: 1rem;
+       opacity: 0.5;
+     
+       margin-top: 1.5rem;
+     }
+     & button{
+       padding: 0.8rem;
+       border: none;
+       border-radius: 25px;
+       border:3px solid  rgb(247, 185, 28);
+       background-color: white;
+       transition:ease-in;
+       cursor: pointer;
+     }
+     & button:hover{
+      background-color: rgb(247, 185, 28);
+    }
+   }
+   & .food_Container{
+     & .food_1{
+       @include flex_display(column,none );
+    
+        
+     }
+     @include flex_display(row,none );
+      & .food_2{
+        @include flex_display(column-reverse,none );
+        
+      }
+   }
+  
+   
+}
+.home_section_2{
+  @include flex_display(column,none );
+  height: max-content;
+  background-color: whitesmoke;
+  padding: 1rem;
+  & .random_heading{
+    width: 100vw;
+    @include flex_display(row,none );
+      justify-content: center;
+     & p{
+      display: flex;
+      justify-content: center;
+      width: 21vmax;
+       font-size: x-large;
+       font-weight: 700;
+       color: rgb(172, 153, 12);
+       font-family: 'PT Sans Narrow', sans-serif;
+       
+     }
+  }
+  & .random_items{
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

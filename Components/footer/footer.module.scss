@@ -1,0 +1,40 @@
+@mixin flex_display ($direction , $space){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $space;
+  
+  }
+.footer_section{
+    max-width: 100vw;
+    & footer{
+        @include flex_display(column,center );
+        & .copyright{
+            @include flex_display(row,center );
+            justify-content: space-between;
+           & h3{
+               margin:10px;
+           }
+           font-size: medium;
+           font-weight: 500;
+           & .media{
+            @include flex_display(row,center );
+           
+            & .socialMedia_handle{
+                padding: 1.5rem;
+                @include flex_display(row, none )
+            }
+        }
+        }
+        & .contact_info{
+            background-color: white;
+            @include flex_display(column,none );
+            width:100vw;
+            & h3{
+                margin: 10px;
+            }
+           
+
+        }
+    }
+
+}
