@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const  NoData = () =>{
     return(
         <div style={{display:"flex", flexDirection:"column" ,justifyContent:"center" ,alignItems:"center"}}>
-          <Image src="/images/cross.png" width="128" height ="128" />
+          <Image src="/images/cross.png" alt="cross" width="128" height ="128" />
           <h3 style={{margin:"5px" }}>Oops! No Data found</h3>
         </div>
     )
@@ -20,11 +20,11 @@ export default function Recipes() {
         return (
 
             <div key={meal.idMeal} className={ `${styles.recipe_card} ${ meal.strCategory == "Chicken" || meal.strCategory =="Seafood" ? styles.non_veg_recipe_card: styles.veg_recipe_card}`} >
-                <Image className={styles.recipe_card_image} src={meal.strMealThumb} width="200" height="150" priority ></Image>
+                <Image className={styles.recipe_card_image} alt="meals" src={meal.strMealThumb} width="200" height="150" priority ></Image>
 
                 <div className={styles.recipe_card_header}>
                     <h3>{meal.strMeal}</h3>
-                    <Image className={styles.recipe_card_image} src="/images/favorite.png" width="32" height="32" priority ></Image>
+                    <Image className={styles.recipe_card_image} alt="fav" src="/images/favorite.png" width="32" height="32" priority ></Image>
                 </div>
 
             </div>

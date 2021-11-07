@@ -30,12 +30,12 @@ export default function Home() {
                 <div className={styles.food_Container}>
                     <div className={styles.food_1}>
                       
-                        <Image src="/images/chicken.png" width="350" height="350"  />
+                        <Image src="/images/chicken.png" alt = "hImge" width="350" height="350"  />
 
                     </div>
                     <div className={styles.food_2}>
-                        <Image src="/images/friedChicken.png" width="300" height="300"  />
-                        <Image src="/images/rice.png" width="375" height="300"  />
+                        <Image src="/images/friedChicken.png" alt="hImage" width="300" height="300"  />
+                        <Image src="/images/rice.png"alt="hImage" width="375" height="300"  />
                     </div>
 
 

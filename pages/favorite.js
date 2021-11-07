@@ -8,7 +8,7 @@ export default function Favorite(){
     return(
         <div className={styles.oops}>
         
-                    <Image styles={styles.noData}  width="900" height="200" src='/images/noData.jpg' />
+                    <Image styles={styles.noData}  alt = "nodata" width="900" height="200" src='/images/noData.jpg' />
                 
             
         </div>
