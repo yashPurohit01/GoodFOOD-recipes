@@ -19,7 +19,7 @@ export default function Recipes() {
     
         return (
 
-            <div key={data.idMeal} className={ `${styles.recipe_card} ${ meal.strCategory == "Vegetarian" ? styles.veg_recipe_card: styles.non_veg_recipe_card}`} >
+            <div key={meal.idMeal} className={ `${styles.recipe_card} ${ meal.strCategory == "Chicken" || meal.strCategory =="Seafood" ? styles.non_veg_recipe_card: styles.veg_recipe_card}`} >
                 <Image className={styles.recipe_card_image} src={meal.strMealThumb} width="200" height="150" priority ></Image>
 
                 <div className={styles.recipe_card_header}>

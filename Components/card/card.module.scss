@@ -8,18 +8,23 @@
 .card {
     @include flex_display(row,none );
     margin: 1.2rem;
-    padding: .5rem;
+    padding: 1.5rem;
     border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    & .card_im{  
+        padding: 1.5rem;
      & .card_img{
           height: 40vh;
           width: 20vw;
           border-radius: 10px;
           box-shadow: 0px -10px 30px #ccc;
+          margin: 1.5rem;
       }
-    
+    }
     & .recipe_discription{
         background-color: white;
-        width: 60vw;
+        max-width: 60vmax;
         
         margin: 20px 0 0 30px;
         padding: .5rem;
