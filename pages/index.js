@@ -10,7 +10,9 @@ export default function Home() {
      const dispatch = useDispatch()
      const randomResult = useSelector(state => state.randomResult);
      const {randomData , loading , err} = randomResult 
+
     useEffect(() => {
+        /* eslint-disable */
         dispatch(dataLoaderAction());
            
     }, [])
