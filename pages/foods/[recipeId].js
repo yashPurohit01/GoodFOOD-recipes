@@ -28,7 +28,7 @@ export default function Recipedetails() {
     }
     console.log(id);
     useEffect(() => {
-        console.log("useff")
+        /* eslint-disable */
        dispatch(foodDetailsAction(id));
     }, [id])
 
