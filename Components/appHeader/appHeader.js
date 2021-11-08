@@ -18,7 +18,7 @@ export default function appHeader() {
     const handlekeyPress = (e) => {
         if (e.key === "Enter") {
             searchHandler();
-            Router.push('/recipes');
+            Router.push('/foods');
 
         }
     }

@@ -1,0 +1,59 @@
+
+.foodDetail{
+    min-height: 100vh;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    padding: 2rem;
+    & .foodDetailsImage{
+         & .descImage{
+            border: 1px solid red;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+         }
+    }
+    & .foodDes{
+        max-width: 50vw;
+        & h2{
+            color: rgb(157, 105, 10);
+            font-family: 'Lobster', cursive;
+        }
+        & p{
+            font-weight: 500;
+            padding: 1.5rem;
+            
+            
+            font-size: large;
+            
+        }
+        & h3{
+            font-size: medium;
+            opacity: .7;
+            & span{
+                font-size: large;
+                margin-left: 5px;
+                font-weight: 500;
+                color:rgb(111, 75, 9) ;
+                opacity: 1;
+            }
+        }
+        & span{
+            font-size: small;
+            color: rgb(111, 75, 9);
+            font-weight: 500;
+            margin-left: 10px;
+            margin-bottom: 2.5rem;
+        }
+        & .ingre{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            & .inngreName{
+                padding: 10px;
+                background-color:rgb(197, 138, 29);
+                color: white;
+                border-radius: .7rem;
+                margin: 5px;font-weight: bold;
+            }
+        }
+    }
+}
