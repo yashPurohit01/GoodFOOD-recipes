@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { DATA_LOADED_FAILED, DATA_LOADED_SUCCESSFULLY, DATA_LOADER } from '../types';
 
-const url = "https://www.themealdb.com/api/json/v1/1/random.php"
+export const url = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 export const dataLoaderAction = () => async(dispatch)=>{
     dispatch({type:DATA_LOADER});

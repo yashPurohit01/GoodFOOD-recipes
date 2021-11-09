@@ -7,26 +7,32 @@
  
 .card {
     @include flex_display(row,none );
+   
     margin: 1.2rem;
+    margin-top: .5rem;
     padding: 1.5rem;
     border-radius: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     & .card_im{  
-        padding: 1.5rem;
+      
+        border-radius:10px ;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid #ccc;
+        max-height:fit-content;
      & .card_img{
-          height: 40vh;
+          
           width: 20vw;
           border-radius: 10px;
-          box-shadow: 0px -10px 30px #ccc;
-          margin: 1.5rem;
+      /*     box-shadow: 0px -10px 30px #ccc; */
+          
       }
     }
     & .recipe_discription{
         background-color: white;
         max-width: 60vmax;
-        
-        margin: 20px 0 0 30px;
+        margin-left: 30px; 
         padding: .5rem;
         box-shadow: 0px -10px 30px #ccc;
         border-radius: 10px;
@@ -46,3 +52,32 @@
        
     }
 } 
+
+.oops{
+    background-color: white;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & .favHeading{
+       height: max-content;
+       width: max-content;
+       border: 3px solid rgb(235, 170, 49);
+       margin: 2rem;
+       padding: .5rem;
+       border-radius: 10px;
+    
+    & h3{
+         padding: 0;
+         margin: 0;
+         color: rgb(111, 75, 9);
+        
+    }
+}
+    & .noData{
+        height: 100vh;
+        width: 100vw;
+        object-fit: fill;
+    }
+}

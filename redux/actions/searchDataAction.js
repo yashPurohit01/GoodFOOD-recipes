@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { SEARCHED_DATA, SEARCHED_DATA_FAILED, SEARCHED_DATA_SUCCESSFULLY } from '../types';
 
-const searchUrl = "https://www.themealdb.com/api/json/v1/1/search.php";
+export const searchUrl = "https://www.themealdb.com/api/json/v1/1/search.php";
 
 export const searchDataAction = (search) => async (dispatch) => {
     dispatch({ type: SEARCHED_DATA });
@@ -12,7 +12,7 @@ export const searchDataAction = (search) => async (dispatch) => {
         }
     }).then(res => {
          const {data} = res;
-         console.log(data)
+
         return dispatch({
             type: SEARCHED_DATA_SUCCESSFULLY,
             payload: data,

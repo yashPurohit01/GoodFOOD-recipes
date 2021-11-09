@@ -1,8 +1,8 @@
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 import { useEffect } from "react";
-
-import { useSelector , useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import FavoriteIcon from "../../Components/favorite/FavoriteIcon";
 import { foodDetailsAction } from "../../redux/actions/foodDetailsAction";
 import styles from "../../styles/recipesDetail.module.scss"
 
@@ -22,14 +22,14 @@ export default function Recipedetails() {
             }
         }
 
-        console.log(descr);
+       /*  console.log(descr); */
 
 
     }
-    console.log(id);
+  /*   console.log(id); */
     useEffect(() => {
         /* eslint-disable */
-       dispatch(foodDetailsAction(id));
+        dispatch(foodDetailsAction(id));
     }, [id])
 
     const foodDescription = des.meals && des.meals.map(meal => {
@@ -37,13 +37,15 @@ export default function Recipedetails() {
             <div className={styles.foodDetail} key={meal.idMeal}>
                 <div className={styles.foodDetailsImage}>
                     <Image className={styles.descImage} alt="foodImage" src={meal.strMealThumb} width="400" height="300" />
+                
                 </div>
                 <div className={styles.foodDes}>
                     <h2> {meal.strMeal} </h2>
                     <h3>Category:<span>{meal.strCategory}</span></h3>
+                    <FavoriteIcon MealId ={meal.idMeal}/>
                     <span> Ingridients </span>
                     <div className={styles.ingre}>
-                       
+
                         {ingredientArr.map((ingre, index) => {
                             return (
                                 <div className={styles.inngreName} key={index}>
@@ -53,11 +55,12 @@ export default function Recipedetails() {
                         }
                         )
                         }
-                        {/*   <div className={styles.inngreName} >
-                            tomato
-                        </div> */}
+                      
                     </div>
-                    <p>{meal.strInstructions}</p>
+                  
+                </div>
+                <div>
+                  <p>{meal.strInstructions}</p>
                 </div>
             </div>
         )

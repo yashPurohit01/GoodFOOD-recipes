@@ -2,7 +2,6 @@ import styles from './card.module.scss';
 import Image from 'next/image';
 
 export default function Card({ randomData }) {
-    console.log(randomData);
 
     return (
         <div >

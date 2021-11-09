@@ -4,6 +4,7 @@ import { createWrapper } from "next-redux-wrapper";
 import { dataLoadReducer } from "./reducers/dataLoaderReducer";
 import { searchReducer } from "./reducers/searchReducer";
 import { foodDetailReducer } from "./reducers/foodDetailReducer";
+import { addFavReducer } from "./reducers/addFavReducer";
 
 
 const composeEnhancer = /* window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || */ compose ;
@@ -11,9 +12,11 @@ const composeEnhancer = /* window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || */ com
 const reducers = combineReducers({
     randomResult: dataLoadReducer,
     searchResult: searchReducer,
-    foodDetailResult : foodDetailReducer
+    foodDetailResult : foodDetailReducer,
+    addFavorite : addFavReducer
 })
 
+  
  const store = () => createStore(reducers ,  composeEnhancer (applyMiddleware(thunk)));
 
  export const wrapper = createWrapper(store);

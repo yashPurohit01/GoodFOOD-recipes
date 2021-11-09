@@ -9,3 +9,7 @@ export const SEARCHED_DATA_FAILED = "SEARCHED_DATA_FAILED";
 
 export const  FOOD_DETAILS = "FOOD_DETAILS";
 export const  FOOD_DETAILS_FAILED = "FOOD_DETAILS_FAILED";
+
+export const ADD_FAV = "ADD_FAV";
+export const ADD_FAV_FAILED ="ADD_FAV_FAILED"
+export const REMOVE_FAV = "REMOVE_FAV" ;

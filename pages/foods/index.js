@@ -29,7 +29,7 @@ export default function Recipes() {
                  
                 <div className={styles.recipe_card_header}>
                     <h3>{meal.strMeal}</h3>
-                    <Image className={styles.recipe_card_image} alt="fav" src="/images/favorite.png" width="32" height="32" priority ></Image>
+                   {/*  <Image className={styles.recipe_card_image} alt="fav" src="/images/favorite.png" width="32" height="32" priority ></Image> */}
                 </div>
                <div className={styles.view_recipe_button}>
                   <Link href={`/foods/${meal.idMeal}`} ><a onClick={() => dispatch(foodDetailsAction(meal.idMeal))}>view recipe</a></Link>
@@ -42,6 +42,7 @@ export default function Recipes() {
     }) 
     return (
         <div className={styles.recipeCard}>
+            
 
              {!recipes_collection ?
                   <NoData/> :
