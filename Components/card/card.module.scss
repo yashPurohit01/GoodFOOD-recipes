@@ -59,7 +59,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     & .favHeading{
        height: max-content;
        width: max-content;
@@ -74,10 +74,10 @@
          color: rgb(111, 75, 9);
         
     }
-}
-    & .noData{
-        height: 100vh;
-        width: 100vw;
-        object-fit: fill;
+  }
+    & .nodata{
+        @include flex_display(column,center );
+        justify-content:center;
+        
     }
 }

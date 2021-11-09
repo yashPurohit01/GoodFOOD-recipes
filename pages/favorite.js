@@ -13,11 +13,12 @@ export default function Favorite() {
 
     return (
         <div className={styles.oops} >
-            <div className={styles.favHeading}>
-               <h3> favorite Food </h3>
-            </div>
+             <div className={styles.favHeading}>
+                <h3> favorite Food </h3>
+                 </div>
             
             {
+               
                 favproduct.length >0 ? 
                       favproduct.map(meal => {
                         return (
@@ -38,9 +39,11 @@ export default function Favorite() {
                     })
                 
                     :
-                    <Image styles={styles.noData} alt="nodata" width="900" height="200" src='/images/noData.jpg' />
-
-            }
+                    <div className={styles.nodata}>
+                       <Image styles={styles.noData} alt="nodata" width="64" height="64" src='/images/cross.png' />
+                       <span>No data found</span>
+                    </div>
+            }     
         </div>
     )
 }
