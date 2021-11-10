@@ -23,9 +23,10 @@
 .home_section_header{
   @include flex_display(row , space-around);
   flex-wrap: wrap;
-  width: 100vmax;
+  width: 100%;
+  background-color:rgba(240, 183, 60, 0.796);
    & .section{
-     width: 25vmax;
+     width: 18rem;
      padding: 1rem;
      & h1{
        font-size: 2.5rem;
@@ -51,6 +52,7 @@
     }
    }
    & .food_Container{
+     padding: 1.5rem;
      & .food_1{
        @include flex_display(column,none );
     
@@ -71,17 +73,17 @@
   background-color: whitesmoke;
   padding: 1rem;
   & .random_heading{
-    width: 100vw;
+    width: 100%;
     @include flex_display(row,none );
       justify-content: center;
      & p{
       display: flex;
       justify-content: center;
-      width: 21vmax;
+      width: 18rem;
        font-size: x-large;
        font-weight: 700;
-       color: rgb(172, 153, 12);
-       font-family: 'PT Sans Narrow', sans-serif;
+       color: rgb(87, 78, 8);
+       
        
      }
   }

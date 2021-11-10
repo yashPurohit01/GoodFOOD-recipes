@@ -12,7 +12,7 @@ export default function Favorite() {
 
 
     return (
-        <div className={styles.oops} >
+        <div className={styles.oops} style={{width: "100%"}} >
              <div className={styles.favHeading}>
                 <h3> favorite Food </h3>
                  </div>

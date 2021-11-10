@@ -1,29 +1,36 @@
 
 .app_header{
     display: flex;
+    
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding:1rem ;
     align-items: center;
     padding: 20px;
     
     & .logo{
+       display: flex;
+       justify-content: center;
        font-weight: bold;
        margin-left: 1rem;
+       padding: .5rem;
        
     }
     & .sec{
         display: flex;
+        
+        justify-content: center;
         align-items: center;
-        padding-right:30px ;
+        
     & .options{
         display: flex;
         flex-direction: row;
         font-style: unset;
         font-weight: 500;
         & .links{
-            padding: 0 2rem 0 2rem;
+            padding: 0 1rem 0 1rem;
             font-family: 'Nunito', sans-serif;
             font-size: medium;
             font-weight: bold;

@@ -13,7 +13,7 @@ export default function Card({ randomData }) {
                         </div>
                         <div className={styles.recipe_discription}>
                             <h3>{meal.strMeal}</h3>
-                            <div>
+                            <div className={styles.desc_par}>
                                 <p>{meal.strInstructions}</p>
                             </div>
 

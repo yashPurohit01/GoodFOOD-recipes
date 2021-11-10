@@ -14,15 +14,18 @@ export default function Footer (){
         )
     })
     return(
+        
         <div className={styles.footer_section}>
-            <footer>
+            
                 <div className={styles.copyright}>
-                    <h3> goOdFoOd </h3> copyright @2022 ALl right reserved by authority of goOdFoOd
-                    <div className={styles.media}>
+                    <h3> goOdFoOd </h3> 
+                    <span>copyright @2022 All right reserved by authority of goOdFoOd </span>
+                   <div className={styles.media}>
                         {socialMedia}
-                    </div>   
+                    </div> 
                 </div>
-            </footer>
+           
         </div>
+        
     )
 }

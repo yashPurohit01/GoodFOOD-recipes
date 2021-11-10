@@ -9,7 +9,7 @@
 .recipeCard {
     @include display_flex() ;
     min-height: 90vh;
-    width: 100vmax;
+    width: 100%;
     background-color: white;
     & .recipe_card{
         @include display_flex(column,center );
