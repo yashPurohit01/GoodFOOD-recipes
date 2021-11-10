@@ -8,7 +8,7 @@ export default function Footer (){
         return(
             <div className={styles.socialMedia_handle} key={media}> 
                 
-                    <Image src= {`/images/${media}.png`} width="32" height="32" priority/>
+                    <Image src= {`/images/${media}.png`} width="24" height="24" priority/>
                     
             </div>
         )

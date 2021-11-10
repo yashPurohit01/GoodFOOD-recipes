@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Card from '../Components/card/card'
 import { dataLoaderAction } from '../redux/actions/dataLoadAction'
 import styles from '../styles/Home.module.scss'
+import { Loading } from '../Components/loading/Loading'
 
 
 export default function Home() {
@@ -53,7 +54,7 @@ export default function Home() {
                     <Card randomData={randomData}/>   
                 </div>
             </div>
-            
+       
         </div>
     )
 }

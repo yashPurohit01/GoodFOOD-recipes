@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import styles from "../Components/card/card.module.scss"
+import { Loading } from "../Components/loading/Loading";
 
 
 
@@ -16,6 +17,7 @@ export default function Favorite() {
              <div className={styles.favHeading}>
                 <h3> favorite Food </h3>
                  </div>
+                 <Loading/>
             
             {
                

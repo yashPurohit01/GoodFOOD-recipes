@@ -42,11 +42,13 @@
 } */
 .footer_section{
     & .copyright{
-        font-size: 1rem;
+        font-size: .8rem;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         @include flex_display();
          & span{
-             font-weight: bold
+             font-size: .7rem;
+             font-weight: 300;
          }
          & .media{
              @include flex_display( );

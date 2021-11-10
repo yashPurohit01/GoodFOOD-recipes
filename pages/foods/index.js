@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { foodDetailsAction } from '../../redux/actions/foodDetailsAction';
+import { Loading } from '../../Components/loading/Loading';
 
 const  NoData = () =>{
     return(
@@ -34,7 +35,7 @@ export default function Recipes() {
                <div className={styles.view_recipe_button}>
                   <Link href={`/foods/${meal.idMeal}`} ><a onClick={() => dispatch(foodDetailsAction(meal.idMeal))}>view recipe</a></Link>
                  </div>
-                
+                <Loading/>
 
             </div>
 

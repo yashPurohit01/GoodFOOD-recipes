@@ -17,7 +17,8 @@
          }
     }
     & .foodDes{
-        max-width: 50vw;
+        max-width: 50rem;
+        
         & h2{
             color: rgb(157, 105, 10);
             font-family: 'Lobster', cursive;
@@ -62,3 +63,9 @@
         
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .des{
+        max-width: 100%;
+    }
+  }
