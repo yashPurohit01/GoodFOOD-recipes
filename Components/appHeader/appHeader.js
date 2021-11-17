@@ -46,9 +46,9 @@ export default function appHeader() {
                     <div className={styles.links}>
                         <Link className={styles.navs} href="/favorite" ><a>favorite</a></Link>
                     </div>
-                    {/*  <div className={styles.links}>
-                    <Link className={styles.navs} href="/recipes" ><a>recipes</a></Link>
-                </div> */}
+                     <div className={styles.links}>
+                    <Link className={styles.navs} href="/login" ><a>login | sign up</a></Link>
+                </div> 
                 </div>
                 <div className={styles.search}>
                     <div className={styles.searchimg}>

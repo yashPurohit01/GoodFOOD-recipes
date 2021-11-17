@@ -20,7 +20,7 @@
     }
     & .sec{
         display: flex;
-        
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         
@@ -50,17 +50,21 @@
         border-radius: 20px;
         padding:  2px 5px 2px 8px;
         box-shadow: 0  0 2px -1px rgb(140, 139, 139);
+        margin: 1rem;
         & input{
+
             height: 2rem;
             width: 8rem;
             padding: 10px;
             font-weight: bold;
             border: none;
             border-radius: 15px;
+            
            
         }
         & input:focus{
             outline: none;
+            border: 0.1rem solid rgb(177, 116, 2);
         }
         & input::placeholder{
             opacity: .4;
