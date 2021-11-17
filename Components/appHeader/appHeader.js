@@ -14,6 +14,7 @@ export default function appHeader() {
 
     const inputHandler = (e) => {
         setSearch(e.target.value)
+        console.log(e.target)
     }
     const handlekeyPress = (e) => {
         if (e.key === "Enter") {

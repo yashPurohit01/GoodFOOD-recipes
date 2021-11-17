@@ -1,0 +1,81 @@
+@mixin display_flex(  $direction :row ,$justify:center, $align:center) {
+    display:flex;
+    flex-direction : $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+._form{
+    width: 100%;
+/*     height: calc(100vh - 20vh); */
+    @include display_flex(column);
+    & .Signup_form{
+        background-image: url("/images/bgImage.png");
+        background-repeat: no-repeat;
+        background-size:contain;
+        width: 22rem;
+        height: max-content;
+     /*   background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
+        @include display_flex(column);
+        & form{
+         margin-top: 7rem;
+        @include display_flex(column);
+        padding: 1.5rem;
+        width: 16rem;
+        border-radius: .3rem;
+       
+        & h4{
+            margin:0;
+            color: rgb(102, 68, 4);/* 
+            width: 100%; margin-left: 2.5rem; */
+        }
+        & input{
+         
+            border: none;
+            width: 14rem;
+/*             border: .1rem solid orange; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+            padding: .7rem;
+            height: 2.5rem;
+            margin: .5rem;
+            border-radius: .3rem;
+            font-size: medium;
+          
+        }
+        & input:focus {
+            outline:none;
+            border: 0.1rem solid rgb(177, 116, 2);
+          }
+        & .signup_link{
+            font-weight: bolder;
+            font-style: italic;
+            padding:.5rem;
+            font-family: 'Nunito', sans-serif;
+            font-size: small;
+            font-weight: bold;
+            color:rgb(194, 128, 4);
+        }
+        
+        & button{
+            padding: 0.6rem;
+            width: 6rem;
+            border: none;
+            border-radius: 1rem;
+            border:1px solid  rgb(247, 185, 28);
+            background-color: white;
+            transition:ease-in;
+            cursor: pointer;
+            font-size: medium;
+            font-weight: bold;
+             margin-top: 0rem; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+          }
+          & button:hover{
+           background-color: rgb(247, 185, 28);
+           color: white;
+         }
+        }
+    }
+}
