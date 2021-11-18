@@ -5,10 +5,15 @@ import styles from "./appHeader.module.scss";
 import { useState } from 'react';
 import { searchDataAction } from '../../redux/actions/searchDataAction';
 import { useRouter } from 'next/dist/client/router';
+import Login from '../loginForm/LoginModal';
 
 export default function appHeader() {
     const dispatch = useDispatch();
     const Router = useRouter();
+    const [modal , setmodal] = useState(false);
+    const closeHandler = () =>{
+      setmodal(false);
+   }
 
     const [search, setSearch] = useState("");
 
@@ -33,6 +38,8 @@ export default function appHeader() {
         console.log(search);
     }
     return (
+        <>
+         {modal ? <Login closeHandler={closeHandler} setmodal={setmodal} /> : ""}
         <div className={styles.app_header}>
 
             <div className={styles.logo}>
@@ -46,9 +53,10 @@ export default function appHeader() {
                     <div className={styles.links}>
                         <Link className={styles.navs} href="/favorite" ><a>favorite</a></Link>
                     </div>
-                     <div className={styles.links}>
-                    <Link className={styles.navs} href="/login" ><a>login | sign up</a></Link>
-                </div> 
+                   
+                    <div className={styles.button}>
+                        <button onClick={()=>setmodal(true)}>Login</button>
+                    </div>
                 </div>
                 <div className={styles.search}>
                     <div className={styles.searchimg}>
@@ -60,5 +68,6 @@ export default function appHeader() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
